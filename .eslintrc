@@ -1,0 +1,17 @@
+{
+  "extends": "eslint-config-egg",
+  "rules": {
+    // 未使用的变量步报错
+    "no-unused-vars": "off",
+    // 数组，对象的最后一项不必已逗号结尾
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "only-multiline",
+        "objects": "only-multiline"
+      }
+    ],
+    // 关闭分号
+    "semi": "off"
+  }
+}
