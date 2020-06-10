@@ -7,6 +7,7 @@
     "declarations": true
   },
   "dependencies": {
+    "args": "^5.0.1",
     "egg": "^2.15.1",
     "egg-scripts": "^2.11.0",
     "inquirer": "^7.1.0",
@@ -37,7 +38,10 @@
     "ci": "npm run lint && npm run cov",
     "autod": "autod",
     "db:seed": "node scripts/seed.js",
-    "migrate:new": "node scripts/generate.js"
+    "db:migrate": "node scripts/migrate.js",
+    "db:migrate:new": "node scripts/generate.js",
+    "db:migrate:all": "node scripts/migrate.js --executeMode all",
+    "db:migrate:undo": "node scripts/migrate.js --action undo"
   },
   "ci": {
     "version": "10"
