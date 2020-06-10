@@ -52,7 +52,8 @@ const sqldb = {
 return sqldb.run().then(res => {
   console.log('<----- run db seed done')
   process.exit()
-}).catch(ex => {
-  console.log(ex)
+}).catch(error => {
+  console.error('<----- run db seed error: ');
+  console.log(error)
 })
 
