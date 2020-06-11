@@ -4,7 +4,7 @@ const Sequelize = require('sequelize')
 
 const dbHelper = {
   getDatabaseName(bId) {
-    return bId ? `p${bId}` : 'p111222'
+    return bId ? `p${bId}` : 'p666666'
   },
 
   async createDatabase(dbName, options) {

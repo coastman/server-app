@@ -1,5 +1,6 @@
 'use strict'
 
+require(`${process.cwd()}/init`)
 const inquirer = require('inquirer')
 const dbHelper = require(`${process.cwd()}/app/extend/database`)
 const modelsFactory = require(`${process.cwd()}/app/model`)
@@ -53,7 +54,7 @@ return sqldb.run().then(res => {
   console.log('<----- run db seed done')
   process.exit()
 }).catch(error => {
-  console.error('<----- run db seed error: ');
+  console.error('<----- run db seed error: ')
   console.log(error)
 })
 

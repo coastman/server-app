@@ -1,5 +1,6 @@
 'use strict'
 
+require(`${process.cwd()}/init`)
 const path = require('path')
 const fs = require('fs')
 const processArgs = require('args')
