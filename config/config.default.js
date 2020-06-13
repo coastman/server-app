@@ -6,6 +6,7 @@
  * @param {Egg.EggAppInfo} appInfo app info
  */
 module.exports = appInfo => {
+  require(`${process.cwd()}/init`)
   /**
    * built-in config
    * @type {Egg.EggAppConfig}
@@ -17,6 +18,12 @@ module.exports = appInfo => {
 
   // add your middleware config here
   config.middleware = []
+
+  config.cluster = {
+    listen: {
+      port: Number(process.env.PORT) || 8888
+    }
+  }
 
   // add your user config here
   const userConfig = {
