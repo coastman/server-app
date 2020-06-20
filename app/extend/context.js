@@ -1,12 +1,12 @@
 'use strict'
 
 module.exports = {
-  success(data = {}, msg, extra = {}) {
+  success(result = {}, msg, extra = {}) {
     const ctx = this
     ctx.status = 200
     const resp = Object.assign(extra, {
       code: 200,
-      data: data || {},
+      result: result || {},
       msg: msg || 'success'
     })
 
@@ -14,11 +14,11 @@ module.exports = {
     return resp
   },
 
-  error(code, msg = '', data = {}) {
+  error(code, msg = '', result = {}) {
     const ctx = this
     const resp = {
       code,
-      data: data || {},
+      result: result || {},
       msg
     }
     ctx.body = resp
