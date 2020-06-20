@@ -21,7 +21,7 @@
   npm run dev    # 开发环境运行
   npm run start  # 生产环境运行
   npm run test   # 执行单元测试
-  npm run lint   # eslint 校验
+  npm run lint   # Eslint 校验
 ```
 
 ## 常用规范
@@ -47,3 +47,44 @@ type 类型:
 * [Git Commit 规范](https://segmentfault.com/a/1190000009048911)
 
 * [Sequelize 文档](https://itbilu.com/nodejs/npm/VkYIaRPz-.html) 基于 NodeJs 的 MySQL ORM 框架
+
+## 目录结构
+```
+server-app/
+   |
+   ├──app/                       * 主程序入口目录
+   │   │
+   │   │──controller             * 控制器目录
+   │   │
+   │   │──extend                 * 框架扩展目录
+   │   │
+   │   │──migrate                * 数据库迁移脚本目录
+   │   │
+   │   │──model                  * model 文件目录
+   │   │
+   │   │──public                 * 静态资源目录
+   │   │
+   │   │──service                * service 服务目录
+   │   │
+   │   └──router                 * 路由文件
+   │
+   │──config/                    * 配置文件目录
+   │
+   │──scripts/                   * 构建脚本目录
+   │
+   │──test/                      * 单元测试目录
+   │
+   │──.env.example               * 环境变量示例文件
+   |
+   │──.eslintrc                  * Eslint 配置
+   │
+   │──.gitignore                 * Git忽略文件配置
+   |
+   ├──app.js                     * 程序初始化文件
+   │
+   │──CHANGELOG.md               * 版本更新记录
+   │
+   │──init.js                    * 环境变量加载文件
+   │
+   └──package.json               * 依赖信息
+```
