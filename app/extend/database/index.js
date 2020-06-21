@@ -1,6 +1,7 @@
 'use strict'
 
 const Sequelize = require('sequelize')
+const extendInstance = require('./extend')
 
 const dbHelper = {
   getDatabaseName(bId) {
@@ -47,6 +48,8 @@ const dbHelper = {
     )
 
     sequelize.DataTypes = Sequelize.DataTypes
+    // ===== 扩展 sequelize
+    extendInstance(sequelize)
     // ===== 验证是否链接成功
     try {
       await sequelize.authenticate()

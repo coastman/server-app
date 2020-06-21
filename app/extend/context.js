@@ -5,7 +5,7 @@ module.exports = {
     const ctx = this
     ctx.status = 200
     const resp = Object.assign(extra, {
-      code: 200,
+      code: 1,
       result: result || {},
       msg: msg || 'success'
     })
@@ -14,11 +14,10 @@ module.exports = {
     return resp
   },
 
-  error(code, msg = '', result = {}) {
+  error(msg = '', code = 0) {
     const ctx = this
     const resp = {
       code,
-      result: result || {},
       msg
     }
     ctx.body = resp
