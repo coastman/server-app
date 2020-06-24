@@ -1,5 +1,6 @@
 'use strict'
 
+// ==== ctx 上挂载通用方法
 module.exports = {
   success(result = {}, msg, extra = {}) {
     const ctx = this
